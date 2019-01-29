@@ -1,0 +1,15 @@
+---
+applications:
+  - name: gobetween
+    memory: 128M
+    instances: 1
+
+    buildpacks:
+      - https://github.com/cloudfoundry/binary-buildpack.git
+    command: ./gobetween
+
+    routes:
+      - route: loadbalancer.scapp.swisscom.com
+      
+    env:
+      GOBETWEEN: '["from-file", "config/gobetween.toml", "-f", "toml"]'
