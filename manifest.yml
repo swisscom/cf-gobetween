@@ -3,6 +3,7 @@ applications:
   - name: gobetween
     memory: 128M
     instances: 1
+    stack: cflinuxfs3
 
     buildpacks:
       - https://github.com/cloudfoundry/binary-buildpack.git

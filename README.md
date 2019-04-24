@@ -2,7 +2,7 @@
 
 **gobetween** -  modern & minimalistic load balancer and reverse-proxy for the :cloud: Cloud era.
 
-**Current status**: *Under active development*. Currently in use in several highy loaded production environments. **Preconfigured to run as Cloud Foundry app.**
+**Current status**: *Under active development*. Currently in use in several highy loaded production environments.
 
 ## Features
 
@@ -11,7 +11,7 @@
   * **TLS** - [TLS Termination](https://github.com/yyyar/gobetween/wiki/Protocols#tls) + [ACME](https://github.com/yyyar/gobetween/wiki/Protocols#tls) & [TLS Proxy](https://github.com/yyyar/gobetween/wiki/Tls-Proxying)
   * **UDP** - with optional virtual sessions
 
-  
+
 * [Clear & Flexible Configuration](https://github.com/yyyar/gobetween/wiki/Configuration) with [TOML](config/gobetween.toml) or [JSON](config/gobetween.json)
   * **File** - read configuration from the file
   * **URL** - query URL by HTTP and get configuration from the response body 
@@ -36,6 +36,7 @@
 * [Healthchecks](https://github.com/yyyar/gobetween/wiki/Healthchecks)
   * **Ping** - simple TCP ping healtcheck
   * **Exec** - execute arbitrary program passing host & port as options, and read healtcheck status from the stdout
+  * **Probe** - send specific bytes to backend (udp, tcp or tls) and expect correct answer (bytes or regexp)
 
 * [Balancing Strategies](https://github.com/yyyar/gobetween/wiki/Balancing) (with [SNI](https://github.com/yyyar/gobetween/wiki/Server-Name-Indication) support)
   * **Weight** - select backend from pool based relative weights of backends
@@ -68,6 +69,12 @@ Also, it's written in Go, and it's a proxy so it's something that stays between 
 
 ## License
 MIT. See LICENSE file for more details.
+
+## Authors & Maintainers
+- [Yaroslav Pogrebnyak](http://pogrebnyak.info)
+- [Nick Doikov](https://github.com/nickdoikov)
+- [Ievgen Ponomarenko](https://github.com/kikom)
+- [Illarion Kovalchuk](https://github.com/illarion)
 
 ## Logo
 Logo by [Max Demchenko](https://www.linkedin.com/in/max-demchenko-116170112)
